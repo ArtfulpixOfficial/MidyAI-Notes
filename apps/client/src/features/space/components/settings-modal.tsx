@@ -37,7 +37,7 @@ export default function SpaceSettingsModal({
         padding="xl"
         yOffset="10vh"
         xOffset={0}
-        mah={400}
+        mah={650}
       >
         <Modal.Overlay />
         <Modal.Content style={{ overflow: "hidden" }}>
@@ -62,12 +62,12 @@ export default function SpaceSettingsModal({
                 </Tabs.List>
 
                 <Tabs.Panel value="general">
-                  <ScrollArea h={550} scrollbarSize={4} pr={8}>
+                  <ScrollArea h={500} scrollbarSize={4} pr={8}>
                     <SpaceDetails
                       spaceId={space?.id}
                       readOnly={spaceAbility.cannot(
                         SpaceCaslAction.Manage,
-                        SpaceCaslSubject.Settings,
+                        SpaceCaslSubject.Settings
                       )}
                     />
                   </ScrollArea>
@@ -77,7 +77,7 @@ export default function SpaceSettingsModal({
                   <Group my="md" justify="flex-end">
                     {spaceAbility.can(
                       SpaceCaslAction.Manage,
-                      SpaceCaslSubject.Member,
+                      SpaceCaslSubject.Member
                     ) && <AddSpaceMembersModal spaceId={space?.id} />}
                   </Group>
 
@@ -85,7 +85,7 @@ export default function SpaceSettingsModal({
                     spaceId={space?.id}
                     readOnly={spaceAbility.cannot(
                       SpaceCaslAction.Manage,
-                      SpaceCaslSubject.Member,
+                      SpaceCaslSubject.Member
                     )}
                   />
                 </Tabs.Panel>

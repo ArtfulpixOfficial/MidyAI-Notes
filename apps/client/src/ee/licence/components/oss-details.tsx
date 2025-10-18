@@ -11,7 +11,8 @@ export default function OssDetails() {
         withTableBorder
       >
         <Table.Caption>
-          To unlock enterprise features like SSO, MFA, Resolve comments, contact sales@docmost.com.
+          To unlock enterprise features like SSO, MFA, Resolve comments, contact
+          contactus@midyaidesign.com.
         </Table.Caption>
         <Table.Tbody>
           <Table.Tr>

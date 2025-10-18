@@ -2,6 +2,7 @@ import { usePostHog } from "posthog-js/react";
 import { useEffect } from "react";
 import { useAtom } from "jotai";
 import { currentUserAtom } from "@/features/user/atoms/current-user-atom.ts";
+import { Properties } from "posthog-js";
 
 export function PosthogUser() {
   const posthog = usePostHog();
@@ -20,8 +21,8 @@ export function PosthogUser() {
         workspaceHostname: workspace.hostname,
         lastActiveAt: new Date().toISOString(),
         createdAt: user.createdAt,
-        source: "docmost-app",
-      });
+        source: "midyAI-notes",
+      } as Properties);
       posthog?.group("workspace", workspace.id, {
         name: workspace.name,
         hostname: workspace.hostname,
@@ -32,8 +33,8 @@ export function PosthogUser() {
         memberCount: workspace.memberCount,
         lastActiveAt: new Date().toISOString(),
         createdAt: workspace.createdAt,
-        source: "docmost-app",
-      });
+        source: "midyAI-notes",
+      } as Properties);
     }
   }, [posthog, currentUser]);
 

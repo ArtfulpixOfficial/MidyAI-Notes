@@ -35,20 +35,20 @@ export default function AppVersion() {
           position="middle-end"
           style={{ cursor: "pointer" }}
           disabled={!hasUpdate}
-          onClick={() => {
-            window.open(
-              "https://github.com/docmost/docmost/releases",
-              "_blank",
-            );
-          }}
+          // onClick={() => {
+          //   window.open(
+          //     "https://github.com/docmost/docmost/releases",
+          //     "_blank"
+          //   );
+          // }}
         >
           <Text
             size="sm"
             c="dimmed"
-            component="a"
+            // component="a"
             mr={45}
-            href="https://github.com/docmost/docmost/releases"
-            target="_blank"
+            // href="https://github.com/docmost/docmost/releases"
+            // target="_blank"
           >
             {appVersion?.currentVersion && <>v{appVersion?.currentVersion}</>}
           </Text>

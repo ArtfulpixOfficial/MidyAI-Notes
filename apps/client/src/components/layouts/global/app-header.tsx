@@ -1,4 +1,4 @@
-import { Badge, Group, Text, Tooltip } from "@mantine/core";
+import { Badge, Group, Text, Tooltip, Image } from "@mantine/core";
 import classes from "./app-header.module.css";
 import React from "react";
 import TopMenu from "@/components/layouts/global/top-menu.tsx";
@@ -72,16 +72,19 @@ export function AppHeader() {
             </>
           )}
 
-          <Text
+          {/* <Text
             size="lg"
             fw={600}
             style={{ cursor: "pointer", userSelect: "none" }}
             component={Link}
             to="/home"
           >
-            Docmost
-          </Text>
+            MidyAI
+          </Text> */}
 
+          <Link to="/home">
+            <Image src="/MidyAILogo.png" fit="contain" w={45} h="auto" />
+          </Link>
           <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
             {items}
           </Group>
@@ -97,7 +100,7 @@ export function AppHeader() {
         </div>
 
         <Group px={"xl"} wrap="nowrap">
-          {isCloud() && isTrial && trialDaysLeft !== 0 && (
+          {/* {isCloud() && isTrial && trialDaysLeft !== 0 && (
             <Badge
               variant="light"
               style={{ cursor: "pointer" }}
@@ -109,7 +112,7 @@ export function AppHeader() {
                 ? "1 day left"
                 : `${trialDaysLeft} days left`}
             </Badge>
-          )}
+          )} */}
           <TopMenu />
         </Group>
       </Group>

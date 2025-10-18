@@ -1,4 +1,5 @@
 // adapted from: https://github.com/aguingand/tiptap-markdown/blob/main/src/extensions/tiptap/clipboard.js - MIT
+
 import { Extension } from "@tiptap/core";
 import { Plugin, PluginKey } from "@tiptap/pm/state";
 import { DOMParser } from "@tiptap/pm/model";
@@ -43,13 +44,13 @@ export const MarkdownClipboard = Extension.create({
             const html = markdownToHtml(text);
 
             const contentNodes = DOMParser.fromSchema(
-              this.editor.schema,
+              this.editor.schema
             ).parseSlice(elementFromString(html), {
               preserveWhitespace: true,
             });
 
             tr.replaceRange(from, to, contentNodes);
-            tr.setMeta('paste', true)
+            tr.setMeta("paste", true);
             view.dispatch(tr);
             return true;
           },
@@ -70,7 +71,7 @@ export const MarkdownClipboard = Extension.create({
               {
                 preserveWhitespace: true,
                 context,
-              },
+              }
             );
           },
         },
