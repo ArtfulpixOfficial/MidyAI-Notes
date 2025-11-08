@@ -1,6 +1,5 @@
 {
   "name": "midyainotes",
-  "homepage": "https://docmost.com",
   "version": "0.23.2",
   "private": true,
   "scripts": {
@@ -10,7 +9,7 @@
     "collab:dev": "pnpm --filter ./apps/server run collab:dev",
     "server:build": "nx run server:build",
     "client:build": "nx run client:build",
-    "editor-ext:build": "nx run @docmost/editor-ext:build",
+    "editor-ext:build": "nx run @midyainotes/editor-ext:build",
     "client:dev": "nx run client:dev",
     "server:dev": "nx run server:start:dev",
     "server:start": "nx run server:start:prod",
@@ -19,7 +18,7 @@
   },
   "dependencies": {
     "@braintree/sanitize-url": "^7.1.1",
-    "@docmost/editor-ext": "workspace:*",
+    "@midyainotes/editor-ext": "workspace:*",
     "@floating-ui/dom": "^1.7.4",
     "@hocuspocus/extension-redis": "^2.15.3",
     "@hocuspocus/provider": "^2.15.3",
